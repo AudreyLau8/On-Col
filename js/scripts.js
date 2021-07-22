@@ -53,42 +53,38 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-var name = $(."name");
-var email = $(."email");
-var submitBtn = $(".submit-btn");
-var container = $(".card-container");
+
+var submitBtn = $('.submit-btn');
+var container = $('.card-container');
 
 submitBtn.on("click", appendList); 
 
-function appendItem(name, email) {
+function appendList(){
+  
+  var name = $('.name').val();
+  var email = $('.email').val();
+  container.text(`<p>${name}, ${email}</p>`);
   event.preventDefault(); 
-  console.log(`${name}, ${email}`);
- 
-  container.append(`
-    <div>
-      <p class="new-item">${name}</p>          
-    </div>
-    `);
 };
 
 
-// 4️⃣ 💥Delete elements
+// // 4️⃣ 💥Delete elements
 
-  // Listen for a click on the card container 
-    container.on("click", deleteItem);
+//   // Listen for a click on the card container 
+//     container.on("click", deleteItem);
 
-  // Create a function to delete the user's input 
-  // 💥Declare function 
-    function deleteItem() {
+//   // Create a function to delete the user's input 
+//   // 💥Declare function 
+//     function deleteItem() {
       
-      // 💥event.target refers to the element that was clicked on
-      // 💥className checks the class that is on an element
-      // 💥if the element has the class of new-item...
-      if (event.target.className === "new-item") {
+//       // 💥event.target refers to the element that was clicked on
+//       // 💥className checks the class that is on an element
+//       // 💥if the element has the class of new-item...
+//       if (event.target.className === "new-item") {
       
-        // 💥event.target refers to the element that was clicked on
-        // 💥parentNode travels up and looks for the direct parent element
-        // 💥then we will remove the PARENT element, which will be the div
-        event.target.parentNode.remove();
-      };    
-    };
+//         // 💥event.target refers to the element that was clicked on
+//         // 💥parentNode travels up and looks for the direct parent element
+//         // 💥then we will remove the PARENT element, which will be the div
+//         event.target.parentNode.remove();
+//       };    
+//     };
