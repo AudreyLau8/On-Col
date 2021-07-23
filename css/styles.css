@@ -546,6 +546,10 @@ progress {
   text-transform: uppercase;
 }
 
+.inline {
+  display: inline;
+}
+
 .blockquote {
   margin-bottom: 1rem;
   font-size: 1.25rem;
@@ -11143,4 +11147,25 @@ hr{
 
 .copyright {
   background-color: #1a252f;
+}
+
+.profile {
+  font-family: Rubik;
+  background-color: #fff;
+  border: 10px solid #D4F1D8;
+  border-radius: 15px;
+  width: 300px;
+  margin: 20px;
+  padding: 10px;
+  line-height: 1.1;
+}
+
+.profile-name {
+  font-family: Rubik;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.profile-email {
+  font-family: Rubik;
 }

@@ -63,28 +63,40 @@ function appendList(){
   
   var name = $('.name').val();
   var email = $('.email').val();
-  container.text(`<p>${name}, ${email}</p>`);
+  var starting = $('.starting-building').val();
+  var ending = $('.ending-building').val();
+  var time = $('.time').val();
+
+  //takes values from radio options in start and end building quesitons
+  // var starting = document.getElementByld("starting").val();
+  // var ending = document.getElementByld("ending").val();
+  container.append(`
+  <div class="profile">
+    <p class="profile-name">${name}</p>
+    <p class="profile-email">${email}</p>
+    <p class="profile-starting inline">${starting}</p>
+    <p class="inline"> to </p>
+    <p class="profile-ending inline">${ending}</p>
+    <p class="profile-time">At ${time} PM</p>
+  </div>
+  `);
+
+//clears name and email from input boxes
+  var nameInput = $(".name");
+  nameInput.val("");
+  var emailInput = $(".email");
+  emailInput.val("");
+  var startingInput = $(".starting-building");
+  startingInput.val("");
+  var endingInput = $(".ending-building");
+  endingInput.val("");
+  var timeInput = $(".time");
+  timeInput.val("");
+
   event.preventDefault(); 
 };
 
-
-// // 4️⃣ 💥Delete elements
-
-//   // Listen for a click on the card container 
-//     container.on("click", deleteItem);
-
-//   // Create a function to delete the user's input 
-//   // 💥Declare function 
-//     function deleteItem() {
-      
-//       // 💥event.target refers to the element that was clicked on
-//       // 💥className checks the class that is on an element
-//       // 💥if the element has the class of new-item...
-//       if (event.target.className === "new-item") {
-      
-//         // 💥event.target refers to the element that was clicked on
-//         // 💥parentNode travels up and looks for the direct parent element
-//         // 💥then we will remove the PARENT element, which will be the div
-//         event.target.parentNode.remove();
-//       };    
-//     };
+function Profile(name, email) {
+  this.name = name;
+  this.email = email;
+}
