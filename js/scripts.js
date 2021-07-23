@@ -67,6 +67,22 @@ function appendList(){
   var ending = $('.ending-building').val();
   var time = $('.time').val();
 
+  if(name === "") {
+    name = "User";
+  }
+  if(email === "") {
+    email = "name@email.com";
+  }
+  if(starting === "") {
+    starting = "Building 1";
+  }
+  if(ending === "") {
+    ending = "Building 2";
+  }
+  if(time === "") {
+    time = "7 PM";
+  }
+
   //takes values from radio options in start and end building quesitons
   // var starting = document.getElementByld("starting").val();
   // var ending = document.getElementByld("ending").val();
@@ -74,10 +90,9 @@ function appendList(){
   <div class="profile">
     <p class="profile-name">${name}</p>
     <p class="profile-email">${email}</p>
-    <p class="profile-starting inline">${starting}</p>
-    <p class="inline"> to </p>
-    <p class="profile-ending inline">${ending}</p>
-    <p class="profile-time">At ${time} PM</p>
+    <p class="profile-path inline">Path: </p>
+    <p class="profile-starting inline">${starting} to ${ending}</p>
+    <p class="profile-time"><br>Starting at ${time}</p>
   </div>
   `);
 

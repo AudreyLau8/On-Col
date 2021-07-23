@@ -11150,14 +11150,22 @@ hr{
 }
 
 .profile {
+  display: inline-block;
+  margin: 10px;
   font-family: Rubik;
   background-color: #fff;
-  border: 10px solid #D4F1D8;
+  border: 8px solid #D4F1D8;
   border-radius: 15px;
   width: 300px;
-  margin: 20px;
   padding: 10px;
   line-height: 1.1;
+}
+
+.profile:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+  box-shadow: 2px 2px 5px 0.2px #9dd4a4;
+  background-color: #f0fcf2;
 }
 
 .profile-name {
@@ -11166,6 +11174,52 @@ hr{
   font-size: 1.5rem;
 }
 
+.profile-path {
+  font-weight: bold;
+}
+
 .profile-email {
   font-family: Rubik;
+}
+
+.user-input {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: Rubik;
+  background-color: #fff;
+  border: 8px solid #D1D7FF;
+  border-radius: 15px;
+  width: 400px;
+  padding: 10px;
+  line-height: 1.2;
+}
+
+.user-input:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+  box-shadow: 2px 2px 5px 0.2px #9da9f2;
+  background-color: #ebedff;
+}
+
+.match-title {
+  text-align: center;
+}
+
+.match-instructions {
+  font-family: Rubik;
+  text-align: center;
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+label {
+  font-weight: bold;
+}
+
+.lead {
+  font-family: Rubik;
+  color: #fff;
 }
